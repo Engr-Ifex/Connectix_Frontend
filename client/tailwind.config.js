@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      general: ['Inter', 'sans-serif']
+    },
   },
   plugins: [],
 }
