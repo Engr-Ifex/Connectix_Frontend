@@ -24,9 +24,9 @@ const tempData = [
 ]
 const responsive = {
   desktop: {
-      breakpoint: { max: 3000, min: 0 },
-      items: 1,
-      slidesToSlide: 1 // optional, default to 1.
+    breakpoint: { max: 3000, min: 0 },
+    items: 1,
+    slidesToSlide: 1 // optional, default to 1.
   }
 };
 const Login = () => {
@@ -47,10 +47,10 @@ const Login = () => {
         </div>
       </Fade>
       <Fade when={!greenScreen}>
-        <div className={`${greenScreen ? 'hidden' : 'flex'} text-black min-w-screen min-h-screen bg-white flex items-center justify-center gap-2 font-general w-full px-5`}>
+        <div className={`${greenScreen ? 'hidden' : 'flex'} text-black min-w-screen min-h-screen bg-[#F7D685] flex items-center justify-center gap-2 font-general w-full px-5`}>
           {
             isSlide ? (
-              <div className='w-full'>
+              <div className='w-full flex flex-col'>
                 <Carousel
                   responsive={responsive}
                   swipeable={true}
@@ -64,8 +64,8 @@ const Login = () => {
                   dotListClass="custom-dot-list-style"
                 >
                   {tempData.map((data, index) => (
-                    <div className='w-full min-h-[calc(100vh-40px)]' key={index}>
-                      <div className='w-full h-[406px] rounded-lg flex justify-center items-center mb-20'>
+                    <div className='w-full' key={index}>
+                      <div className='w-full h-[406px] rounded-lg flex justify-center items-center mb-12'>
                         <img src={data.url} alt='wrong' className='h-full object-cover object-center rounded-lg'></img>
                       </div>
                       <h2 className='text-[#141414] text-center text-2xl font-bold leading-9 mb-4 mx-5'>
@@ -74,13 +74,16 @@ const Login = () => {
                       <p className='text-[#0000007D] text-center mx-5 mb-7'>
                         {data.desc}
                       </p>
-                      <button className='text-white py-5 w-full text-base font-semibold bg-greenBlue rounded-2xl text-center' onClick={() => setIsSlide(false)}>
-                        Continue
-                      </button>
                     </div>
 
                   ))}
                 </Carousel>
+                <Link to='/SignUp' className='text-white py-5 w-full text-base font-semibold bg-[black] rounded-2xl text-center mb-4 mt-8' onClick={() => setIsSlide(false)}>
+                  Create account
+                </Link>
+                <button className='text-black py-5 w-full text-base font-semibold border border-[#0000007d] rounded-2xl text-center' onClick={() => setIsSlide(false)}>
+                  Sign In
+                </button>
               </div>
             ) : (
               <div className=' pt-32 pb-10 flex flex-col w-full items-center'>

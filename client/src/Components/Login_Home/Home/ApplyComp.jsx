@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { DownArrow, GreenMark, GreyEllipse, MusicNote, UploadImg } from '../SVG';
+import { DownArrow, GreenMark, GreyEllipse, MusicNote, UploadImg, YellowExclam } from '../SVG';
 import Modal from 'react-responsive-modal';
 import "react-responsive-modal/styles.css";
 import styles from './Home.module.css'
 
-const ApplyComp = ({closeAll}) => {
+const ApplyComp = ({ closeAll }) => {
   const [isModal, setIsModal] = useState(false);
 
   const [isSubmit, setIsSubmit] = useState(false);
@@ -28,6 +28,16 @@ const ApplyComp = ({closeAll}) => {
 
   return (
     <div className='font-general w-full flex flex-col relative gap-5 pt-[40px]'>
+      <div className='w-full py-3 px-4 bg-[#F7D685] rounded-2xl'>
+        <div className='flex w-full gap-3'>
+          <div className='mt-1'><YellowExclam /></div>
+          <div className='flex flex-col gap-3 w-full text-sm leading-6'>
+            <p>You have 26 Coins left and this proposal will cost
+              10 coins</p>
+            <button className='py-1 w-[70px] flex items-center justify-center text-xs text-white bg-black rounded-lg'>Buy more</button>
+          </div>
+        </div>
+      </div>
       <div className='w-full relative' onClick={openModal}>
         <input className='w-full p-4 rounded-2xl border border-[#0000007d] ' placeholder="Stage name" >
         </input>
@@ -104,10 +114,22 @@ const ApplyComp = ({closeAll}) => {
               <div className='w-full flex flex-col items-center text-center'>
                 <GreyEllipse />
                 <p className='mt-4 mb-3 text-base font-semibold'>Are you sure you want to submit?</p>
-                <p className='text-sm leading-6 mb-10'>By submitting you agree for your personal information to be shared with the promoter</p>
+                <p className='text-sm leading-6 text-[#424242]'>
+                  By submitting you agree for your personal<br /> information to be shared with the<br /> promoter
+                  <span className='underline'>&nbsp;Privacy Policy</span>
+                </p>
+                <div className='flex items-center justify-center gap-2 mt-4 mb-8'>
+                  <input
+                    type='checkbox'
+                    className='w-4 h-4'
+                  />
+                  <p className='text-xs text-[#141414dd]'>
+                    Yes, I agree to submit
+                  </p>
+                </div>
                 <div className='flex items-center w-full gap-5'>
-                  <button className='w-full flex items-center justify-center py-5 rounded-2xl border border-black text-black font-semibold' onClick={closeModal}>Back</button>
-                  <button className='w-full flex items-center justify-center py-5 rounded-2xl border border-black text-white bg-black font-semibold' onClick={() => setIsSubmit(true)}>Yes, submit</button>
+                  <button className='w-full flex items-center justify-center py-3 rounded-2xl border border-black text-black font-semibold' onClick={closeModal}>Back</button>
+                  <button className='w-full flex items-center justify-center py-3 rounded-2xl border border-black text-white bg-black font-semibold' onClick={() => setIsSubmit(true)}>Yes, submit</button>
                 </div>
               </div>
             )

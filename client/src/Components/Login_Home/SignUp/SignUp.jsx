@@ -52,9 +52,9 @@ const SignUp = () => {
               <p className='text-center text-sm font-semibold my-10'>
                 Resend OTP {counter}s
               </p>
-              <button className='text-white py-5 w-full text-base font-semibold bg-black rounded-2xl'>
+              <Link to='/Create' className='flex items-center justify-center text-white py-5 w-full text-base font-semibold bg-black rounded-2xl'>
                 Continue
-              </button>
+              </Link>
             </div>
             <p className=' float-end font-semibold text-base cursor-pointer ' onClick={() => setIsCode(false)}>
               Back to Sign Up
