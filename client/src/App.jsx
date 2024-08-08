@@ -17,7 +17,7 @@ function App() {
           <Route path='/SignUp' element={<SignUp/>}></Route>
           <Route path='/Events' element={<Events />}></Route>
           <Route path='/Home' element={<Home/>}></Route>
-          <Route path='/Login' element={<Login />}></Route>
+          <Route index element={<Login />}></Route>
           <Route path='/Active' element={<Active/>}></Route>
           <Route path='/ArchiveProposals' element={<ArchProposals/>}></Route>
           <Route path='/Messages' element={<Messages/>}></Route>

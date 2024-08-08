@@ -46,6 +46,7 @@ const ArchProposals = () => {
                                 <p className='text-[11px] text-[#5F5F63]'>Performing price</p>
                                 <p className='font-bold text-xl text-[#141415]'>{data.Price}</p>
                             </div>
+                            
                         </div>
                         <div className='flex gap-2 text-[12px] font-general py-3'>
                             <div> <p className='bg-[#EBEBEB] p-1  px-4 rounded-full flex items-center'> <PiStarFill className='pr-1 text-[#FFC107] text-[17px]' /> {data.Rating}</p></div>
