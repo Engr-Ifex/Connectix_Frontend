@@ -11,7 +11,11 @@ export default {
         'greenBlue': '#00283A',
         'greenLogo': '#7CFFB8',
         'yellowLogo': '#DBEC4D',
-      }
+      },
+      boxShadow: {
+        'thumbShadow': '0px 4px 8px 0px rgba(0, 0, 0, 0.08)',
+        'detailBoxShadow': '0px 5.473px 43.784px 0px rgba(0, 0, 0, 0.05)'
+      },
     },
     fontFamily: {
       general: ['Inter', 'sans-serif']
