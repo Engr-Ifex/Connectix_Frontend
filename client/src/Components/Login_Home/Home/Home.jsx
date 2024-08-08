@@ -58,8 +58,9 @@ const Home = () => {
                 </div>
               </div>
             </div >
-            <div className='w-full h-24 bg-greenBlue text-center rounded-2xl text-white text-xl font-semibold flex items-center justify-center mb-8'>
-              Ads
+            <div className='w-full h-24 bg-[#F7D685] knewave-font text-center rounded-2xl text-black text-xl font-semibold flex items-center justify-center mb-8 '>
+              INTRODUCING A<br />
+              NEW FEATURE
             </div>
             <div className='flex flex-col gap-6 w-full max-h-[calc(100vh-250px)] py-1 h-full overflow-y-scroll'>
               <div className='w-full flex justify-between items-center'>
@@ -76,7 +77,7 @@ const Home = () => {
                   <BlackHeart />
                 </div>
                 <div className='h-[272px] w-full'>
-                  <img className='h-full object-cover object-center' src='/Thumb.png' />
+                  <img className='h-full object-cover object-center' src='/thumb1.png' />
                 </div>
                 <div className='w-full p-5 gap-3 flex flex-col'>
                   <div className='w-full flex items-center justify-between'>
@@ -146,7 +147,7 @@ const Home = () => {
               <div className='flex flex-col min-w-screen text-[#141414] relative py-6'>
                 <p className='absolute -top-1 left-0 font-semibold text-base'>Filter</p>
                 <div className='grid grid-cols-3 w-full gap-4 pt-2 mb-5'>
-                  <div className='py-2 px-3 rounded-[20px] text-[#fff] text-nowrap text-xs bg-[#000] leading-5 text-center'>Club events</div>
+                  <div className='py-2 px-3 rounded-[20px] text-[#fff] text-nowrap text-xs bg-[#F7D685] leading-5 text-center'>Club events</div>
                   <div className='py-2 px-3 rounded-[20px] text-[#5F5F63] text-nowrap text-xs bg-[#e8e8e8] leading-5 text-center'>Church events</div>
                   <div className='py-2 px-3 rounded-[20px] text-[#5F5F63] text-nowrap text-xs bg-[#e8e8e8] leading-5 text-center'>Concert</div>
                   <div className='py-2 px-3 rounded-[20px] text-[#5F5F63] text-nowrap text-xs bg-[#e8e8e8] leading-5 text-center'>20 Applied</div>

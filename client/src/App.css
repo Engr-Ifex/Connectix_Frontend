@@ -2,3 +2,36 @@
   display: none;
 }
 
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid #0000007d;
+  padding: 16px;
+  border-radius: 1.5rem;
+  width: 100%;
+  background-image: url('/keyboard_arrow_down.svg'); /* Add a custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 8px center; /* Position of the custom arrow */
+}
+
+.knewave-font {
+  font-family: "Knewave", system-ui;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+  display: none;
+  }
+  
+  /* Track */
+::-webkit-scrollbar-track {
+	border-radius: 0px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #000000b4;
+}

@@ -45,9 +45,9 @@ const EventDetailComp = ({ setIsEvent }) => {
         <h3 className='text-xl font-semibold'>Event description</h3>
         <p className='text-sm opacity-70'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
         <div className='flex items-center gap-4'>
-          <div className='py-2 px-3 bg-[#d4d4d4] rounded-[20px] text-[10px] text-[#5f5f63]'>20 Applied</div>
-          <div className='py-2 px-3 bg-[#d4d4d4] rounded-[20px] text-[10px] text-[#5f5f63]'>1,000 Audience</div>
-          <div className='py-2 px-3 bg-[#d4d4d4] rounded-[20px] text-[10px] text-[#5f5f63]'>3 special guest</div>
+          <div className='py-2 px-3 bg-[#F7D685] rounded-[20px] text-[10px] text-[#5f5f63]'>20 Applied</div>
+          <div className='py-2 px-3 bg-[#F7D685] rounded-[20px] text-[10px] text-[#5f5f63]'>1,000 Audience</div>
+          <div className='py-2 px-3 bg-[#F7D685] rounded-[20px] text-[10px] text-[#5f5f63]'>3 special guest</div>
         </div>
       </div>
       <div className='border-t border-b border-[#5F5F63] flex flex-col gap-4 py-4'>
