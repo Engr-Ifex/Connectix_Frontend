@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { BlueBadge, Filter, GrayHeart, GreenBadge, LocationMark } from '../SVG';
+import { BlueBadge, EventsIcon, FavoritesIcon, Filter, GrayHeart, GreenBadge, HomeIcon, LocationMark, Profile, Proposal } from '../SVG';
 import EventDetailComp from '../Home/EventDetailComp';
 import styles from './Events.module.css';
 import "react-responsive-modal/styles.css";
+import { BrowserRouter as Router, Route, useLocation, useParams, Link } from 'react-router-dom';
+
 import Modal from 'react-responsive-modal'
 
 const Events = () => {
@@ -24,7 +26,30 @@ const Events = () => {
           </div>
         ) :
           (
-            <div className='mt-4 px-6 w-full min-w-screen font-general '>
+            <div className='mt-4 px-6 w-full min-w-screen font-general relative'>
+              <div className='fixed z-10 bg-white w-full bottom-0 left-0 right-0 px-6 shadow-menuShadow pt-2 pb-6 grid grid-cols-5'>
+                <Link to='/home' className='flex flex-col items-center gap-1 opacity-70'>
+                  <HomeIcon />
+                  <p className='text-xs font-bold text-black'>Home</p>
+                </Link>
+                <Link to='/Active' className='flex flex-col items-center gap-1 opacity-70'>
+                  <Proposal />
+                  <p className='text-xs font-bold text-black'>Proposal</p>
+                </Link>
+                <Link to='/events' className='flex flex-col items-center gap-1'>
+                  <EventsIcon />
+                  <p className='text-xs font-bold text-black'>Events</p>
+                </Link>
+                <Link to='/favorites' className='flex flex-col items-center gap-1 opacity-70'>
+                  <FavoritesIcon />
+                  <p className='text-xs font-bold text-black'>Favorites</p>
+                </Link>
+                <Link to='/profile' className='flex flex-col items-center gap-1 opacity-70'>
+                  <Profile />
+                  <p className='text-xs font-bold text-black'>Profile</p>
+                </Link>
+
+              </div>
               <div className='flex flex-col gap-6 w-full max-h-[calc(100vh-150px)] py-1 h-full overflow-y-scroll'>
                 <div className='w-full flex justify-between items-center'>
                   <h3 className='text-xl font-semibold'>All events</h3>

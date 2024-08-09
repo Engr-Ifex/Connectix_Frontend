@@ -4,6 +4,7 @@ import { FcApproval } from "react-icons/fc";
 import { CiLocationOn } from "react-icons/ci";
 import { PiStarFill } from "react-icons/pi";
 import Archive from './ArchiveData'
+import Navbar from '../../Navbar/Navbar'
 
 const ArchProposals = () => {
   return (
@@ -61,6 +62,8 @@ const ArchProposals = () => {
                             <p className='font-semibold'>Date: {data.Date}</p>
                         </div>
                     </div>
+                    <Navbar />
+
                 </div>
             </div>
         ))}

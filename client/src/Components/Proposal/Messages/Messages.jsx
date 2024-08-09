@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { GiSettingsKnobs } from "react-icons/gi";
 import data from './MsgData';
 import { AiFillFire } from "react-icons/ai";
+import Navbar from '../../Navbar/Navbar'
 
 
 const Messages = () => {
@@ -34,6 +35,7 @@ const Messages = () => {
                 <GiSettingsKnobs className='text-white font-bold' />
                 </div>
             </div>
+
         </div>
         
         {
@@ -51,6 +53,8 @@ const Messages = () => {
             </div>
             ))
         }
+       <Navbar />
+
     </div>
   )
 }

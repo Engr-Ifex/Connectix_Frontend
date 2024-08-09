@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Navbar from '../../Navbar/Navbar';
 
 const Active = () => {
   return (
@@ -40,6 +41,8 @@ const Active = () => {
             <p className='font-extralight'>Active</p>
             <p className='font-extralight'>Proposals</p>
         </div>
+
+        <Navbar />
     </div>
   )
 }
