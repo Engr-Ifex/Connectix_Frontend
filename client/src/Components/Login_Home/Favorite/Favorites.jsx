@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { BlueBadge, EventsIcon, FavoritesIcon, Filter, GrayHeart, GreenBadge, HomeIcon, LocationMark, Profile, Proposal } from '../SVG';
+import { BlueBadge, EventsIcon, FavoritesIcon, Filter,  GreenBadge, HomeIcon, LocationMark, Profile, Proposal, RedHeart } from '../SVG';
 import EventDetailComp from '../Home/EventDetailComp';
-import styles from './Events.module.css';
+import styles from './Favorites.module.css';
 import "react-responsive-modal/styles.css";
-import { BrowserRouter as Router, Route, useLocation, useParams, Link } from 'react-router-dom';
 
 import Modal from 'react-responsive-modal'
 import Navbar from '../../Navbar/Navbar';
 
-const Events = () => {
+const Favorites = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isEvent, setIsEvent] = useState(false);
   function openModal() {
@@ -31,14 +30,14 @@ const Events = () => {
               <Navbar />
               <div className='flex flex-col gap-6 w-full max-h-[calc(100vh-150px)] py-1 h-full overflow-y-scroll'>
                 <div className='w-full flex justify-between items-center'>
-                  <h3 className='text-xl font-semibold'>Events</h3>
+                  <h3 className='text-xl font-semibold'>Favorites</h3>
                   <button className='p-[10px] flex items-center justify-center rounded bg-black' onClick={openModal}>
                     <Filter />
                   </button>
                 </div>
                 <div className='w-full shrink-0 rounded-2xl shadow-thumbShadow bg-[#ebebeb] p-3 overflow-hidden relative' onClick={() => setIsEvent(true)}>
                   <div className='absolute top-6 right-8'>
-                    <GrayHeart />
+                    <RedHeart />
                   </div>
                   <div className='h-[272px] w-full'>
                     <div className='bg-[#ccc] w-full h-full object-cover object-center rounded-2xl' />
@@ -62,7 +61,7 @@ const Events = () => {
                         </p>
                       </div>
                     </div>
-                    <button className='w-full flex items-center justify-center py-4 rounded-2xl border border-black text-white bg-black font-semibold'>View details</button>
+                    {/* <button className='w-full flex items-center justify-center py-4 rounded-2xl border border-black text-white bg-black font-semibold'>View details</button> */}
                   </div>
                 </div>
               </div>
@@ -104,4 +103,4 @@ const Events = () => {
   );
 }
 
-export default Events;
+export default Favorites;

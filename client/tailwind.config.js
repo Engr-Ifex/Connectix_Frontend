@@ -14,7 +14,8 @@ export default {
       },
       boxShadow: {
         'thumbShadow': '0px 4px 8px 0px rgba(0, 0, 0, 0.08)',
-        'detailBoxShadow': '0px 5.473px 43.784px 0px rgba(0, 0, 0, 0.05)'
+        'detailBoxShadow': '0px 5.473px 43.784px 0px rgba(0, 0, 0, 0.05)',
+        'menuShadow': '0px -1px 0px 0px rgba(0, 0, 0, 0.05)'
       },
     },
     fontFamily: {
