@@ -8,6 +8,7 @@ import Login from './Components/Login_Home/Login/Login';
 import Home from './Components/Login_Home/Home/Home';
 import Events from './Components/Login_Home/Events/Events';
 import Create from './Components/Login_Home/Create/Create';
+import Favorites from './Components/Login_Home/Favorite/Favorites';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
      <div>
         <Routes>
           <Route path='/SignUp' element={<SignUp/>}></Route>
+          <Route path='/favorites' element={<Favorites />}></Route>
           <Route path='/Create' element={<Create/>}></Route>
           <Route path='/Events' element={<Events />}></Route>
           <Route path='/Home' element={<Home/>}></Route>
