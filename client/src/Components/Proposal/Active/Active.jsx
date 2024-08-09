@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Unread from './UnreadData'
+
 
 const Active = () => {
   return (
@@ -40,6 +42,28 @@ const Active = () => {
             <p className='font-extralight'>Active</p>
             <p className='font-extralight'>Proposals</p>
         </div>
+        <div className='flex gap-4'>
+          <p className='font-bold'>Unread proposals </p>
+          <p className='text-white bg-[#FFC107] rounded-full px-[7px] pt-[2px] text-[13px]  '>8</p>
+        </div>
+
+
+        {
+        Unread.map((item) => (
+
+        <div key={item.id} className='flex bg-white rounded p-5 text-sm shadow-lg mb-5'>
+          <img src={item.image} alt="" className='w-[40px] h-[40px] rounded-full mr-3'/>
+          <div>
+            <p className='font-bold'>{item.name}</p>
+            <p className='font-medium'>{item.invite} <span className='text-[#b6b5b5]'>{item.time}</span></p>
+            <Link className='no-underline hover:underline' to={item.link}>
+             <p className='font-bold'>View Proposal</p>
+          </Link>
+          </div>
+          <img src={item.image2} alt="" className='w-[50px] h-[50px] rounded' />
+        </div>
+        ))
+        }
     </div>
   )
 }

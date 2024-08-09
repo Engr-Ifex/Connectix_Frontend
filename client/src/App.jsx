@@ -8,6 +8,7 @@ import Login from './Components/Login_Home/Login/Login';
 import Home from './Components/Login_Home/Home/Home';
 import Events from './Components/Login_Home/Events/Events';
 import Create from './Components/Login_Home/Create/Create';
+import Settings from './Components/Proposal/Settings/Settings';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path='/Active' element={<Active/>}></Route>
           <Route path='/ArchiveProposals' element={<ArchProposals/>}></Route>
           <Route path='/Messages' element={<Messages/>}></Route>
+          <Route path='/Settings' element={<Settings/>}></Route>
         </Routes>
      </div>
     </>
