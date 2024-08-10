@@ -93,7 +93,7 @@ const SignUp = () => {
                 <Facebook />
               </div>
             </div>
-            <Link to='/Login' className='font-semibold cursor-pointer text-base text-center'>Already have an account? Sign In</Link>
+            <Link to='/mainlogin' className='font-semibold cursor-pointer text-base text-center'>Already have an account? Sign In</Link>
           </div>
         )
       }

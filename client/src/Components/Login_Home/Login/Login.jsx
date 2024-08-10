@@ -65,8 +65,8 @@ const Login = () => {
                 >
                   {tempData.map((data, index) => (
                     <div className='w-full' key={index}>
-                      <div className='w-full h-[406px] rounded-lg flex justify-center items-center mb-12'>
-                        <img src={data.url} alt='wrong' className='h-full object-cover object-center rounded-lg'></img>
+                      <div className='w-full  rounded-lg flex justify-center items-center mb-12'>
+                        <img src={data.url} alt='wrong' className='h-[25rem] mt-12 object-cover object-center rounded-lg'></img>
                       </div>
                       <h2 className='text-[#141414] text-center text-2xl font-bold leading-9 mb-4 mx-5'>
                         {data.title}
@@ -81,13 +81,17 @@ const Login = () => {
                 <Link to='/SignUp' className='text-white py-5 w-full text-base font-semibold bg-[black] rounded-2xl text-center mb-4 mt-8' onClick={() => setIsSlide(false)}>
                   Create account
                 </Link>
+                <Link to='/mainlogin'>
                 <button className='text-black py-5 w-full text-base font-semibold border border-[#0000007d] rounded-2xl text-center' onClick={() => setIsSlide(false)}>
                   Sign In
                 </button>
+                
+                </Link>
+               
               </div>
             ) : (
               <div className=' pt-32 pb-10 flex flex-col w-full items-center'>
-                <div className=' bg-black rounded-xl w-[108px] h-20 mb-[60px]' />
+                <div className=' bg-black -mt-8 rounded-xl w-[108px] h-20 mb-[60px]' />
                 <div className='gap-3 flex flex-col items-center mb-8'>
                   <p className='text-xl font-bold'>Log in your account</p>
                   <p className='text-sm text-[rgba(0,0,0,0.5)]'>Fill the information below to Log in</p>

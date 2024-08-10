@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Unread from './UnreadData'
+import Navbar from '../../Navbar/Navbar'
 
 
 const Active = () => {
@@ -64,7 +65,28 @@ const Active = () => {
         </div>
         ))
         }
-    </div>
+         {
+        Unread.map((item) => (
+
+        <div key={item.id} className='flex bg-white rounded p-5 text-sm shadow-lg mb-5'>
+          <img src={item.image} alt="" className='w-[40px] h-[40px] rounded-full mr-3'/>
+          <div>
+            <p className='font-bold'>{item.name}</p>
+            <p className='font-medium'>{item.invite} <span className='text-[#b6b5b5]'>{item.time}</span></p>
+            <Link className='no-underline hover:underline' to={item.link}>
+             <p className='font-bold'>View Proposal</p>
+          </Link>
+          </div>
+          <img src={item.image2} alt="" className='w-[50px] h-[50px] rounded' />
+        </div>
+        ))
+        }
+     
+     <div className="navbar mb-24">
+      <Navbar />
+      </div>   
+      
+     </div>
   )
 }
 

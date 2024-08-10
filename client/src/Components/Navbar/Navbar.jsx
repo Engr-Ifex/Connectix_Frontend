@@ -25,7 +25,7 @@ const Navbar = () => {
           <FavoritesIcon />
           <p className='text-xs font-bold text-black'>Favorites</p>
         </Link>
-        <Link to='/profile' className={`${location.pathname == '/profile' ? '' : 'opacity-70' } flex flex-col items-center gap-1`}>
+        <Link to='/Profile' className={`${location.pathname == '/profile' ? '' : 'opacity-70' } flex flex-col items-center gap-1`}>
           <Profile />
           <p className='text-xs font-bold text-black'>Profile</p>
         </Link>
