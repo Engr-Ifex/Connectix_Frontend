@@ -11,6 +11,15 @@ import Create from './Components/Login_Home/Create/Create';
 import Settings from './Components/Proposal/Settings/Settings';
 import MainLogin from './Components/MainLogin/MainLogin';
 import Favorites from './Components/Login_Home/Favorite/Favorites';
+import Activities from './Components/Profile/Activities/Activities'
+import BuyCoin from './Components/Profile/BuyCoin/BuyCoin';
+import ProfileSettings from './Components/Profile/Settings/Settings'
+import Payment from './Components/Profile/Payment/Payment';
+import ChangePassword from './Components/Profile/ChangePassword/ChangePassword';
+import MyProfile from './Components/Profile/ViewProfile/MyProfile';
+import Profile from './Components/Profile/Profile/Profile';
+
+
 function App() {
 
   return (
@@ -24,11 +33,20 @@ function App() {
           <Route index element={<Login />}></Route>
           <Route path='/Active' element={<Active/>}></Route>
           <Route path='/ArchiveProposals' element={<ArchProposals/>}></Route>
+          <Route path='/settings' element={<Settings/>}></Route>
           <Route path='/Messages' element={<Messages/>}></Route>
-          <Route path='/Settings' element={<Settings/>}></Route>
           <Route path='/mainlogin' element={<MainLogin/>}></Route>
           <Route path='/favorites' element={<Favorites/>}></Route>
-          
+          <Route path='/activities' element={<Activities/>}></Route>
+          <Route path='/buycoin' element={<BuyCoin/>}></Route>
+          <Route path='/payment' element={<Payment/>}></Route>
+          <Route path='/profilesettings' element={<ProfileSettings/>}></Route>
+          <Route path='/Profile' element={<Profile/>}></Route>
+          <Route path='/MyProfile' element={<MyProfile/>}></Route>
+          <Route path='/ChangePassword' element={<ChangePassword/>}></Route>          
+
+
+
         </Routes>
      </div>
     </>

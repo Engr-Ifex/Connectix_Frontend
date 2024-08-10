@@ -82,9 +82,11 @@ const Active = () => {
         ))
         }
      
-
-        <Navbar />
-    </div>
+     <div className="navbar mb-24">
+      <Navbar />
+      </div>   
+      
+     </div>
   )
 }
 
