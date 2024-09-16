@@ -28,12 +28,10 @@ const MyProfile = () => {
     "Music Marketing",
     "Vocal Coaching",
     "Music Business",
-    "Podcasting",
     "Audio Mixing",
     "Beat Making",
     "Music Journalism",
     "Event Planning",
-    "Podcasting",
     "Audio",
   ]);
 

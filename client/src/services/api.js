@@ -1,44 +1,58 @@
-// src/services/api.js
 import axios from 'axios';
 
-// For local development, we'll always use the local API URL
-const apiUrl = import.meta.env.VITE_API_URL || '/api';
-console.log('API URL:', apiUrl);
-
-
 const api = axios.create({
-  baseURL: apiUrl,
+  baseURL: 'http://localhost:3700/api/v1',
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-// Request interceptor
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
+  console.log("Token being sent:", token);
+
   if (token) {
     config.headers['Authorization'] = `Bearer ${token}`;
+    console.log("Token:", localStorage.getItem('token'));
   }
   return config;
 }, (error) => {
   return Promise.reject(error);
 });
 
-// Response interceptor
+
 api.interceptors.response.use((response) => {
   return response;
-}, (error) => {
-  if (error.response && error.response.status === 401) {
-    // Handle unauthorized access (e.g., redirect to login)
-    // window.location.href = '/login';
+}, async (error) => {
+  const originalRequest = error.config;
+  if (error.response.status === 401 && !originalRequest._retry) {
+    originalRequest._retry = true;
+    try {
+      // Implement your token refresh logic here
+      const newToken = await refreshToken();
+      localStorage.setItem('token', newToken);
+      originalRequest.headers['Authorization'] = `Bearer ${newToken}`;
+      return api(originalRequest);
+    } catch (refreshError) {
+      // Handle refresh failure (e.g., redirect to login)
+      return Promise.reject(refreshError);
+    }
   }
   return Promise.reject(error);
 });
 
-// API methods
+export default api;
+
+
+
+
+
+
 // export const authAPI = {
 //   login: (credentials) => api.post('/auth/login', credentials),
-//   register: (userData) => api.post('/auth/register', userData),
+//   register: (userData) => api.post('/auth/user-register', userData),
+//   resetpassword: (userData) => api.post('/auth/change-password', userData),
+
 //   logout: () => api.post('/auth/logout'),
 // };
 
@@ -61,4 +75,3 @@ api.interceptors.response.use((response) => {
 //   removeFavorite: (eventId) => api.delete(`/favorites/${eventId}`),
 // };
 
-export default api;

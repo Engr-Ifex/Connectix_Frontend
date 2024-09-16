@@ -114,7 +114,7 @@ const Profile = () => {
             <FaChevronRight className="text-gray-400" />
           </div>
         </Link>
-        <Link className="no-underline text-black" to="/Settings">
+        <Link className="no-underline text-black" to="/profilesettings">
           <div className="flex items-center justify-between p-5 sm:p-6 border-b">
             <div className="flex items-center">
               <FaCog className="text-gray-600 mr-3" />
