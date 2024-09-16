@@ -135,7 +135,7 @@ const Settings = () => {
 
 
         {visibleDiv === 'div4' && (
-             <div onClick={() => handleToggle('div1')} className='h-screen z-20 bg-[#00000081] absolute top-0 -ml-5 w-screen flex flex-col justify-center items-center text-center'>
+             <div onClick={() => handleToggle('div1')} className=' fade-slide-in h-screen z-20 bg-[#00000081] absolute top-0 -ml-5 w-screen flex flex-col justify-center items-center text-center'>
              <div className='bg-white m-5 p-10 rounded-lg'>
                  <div className='flex justify-center items-center text-center bg-[#22C3A6] p-[10px] m-auto mb-5  rounded-full h-[50px] w-[50px] '>
                  <IoCheckmarkSharp className='text-white text-xl' />
@@ -148,7 +148,7 @@ const Settings = () => {
         )}
 
         {visibleDiv === 'div5' && (
-             <div onClick={() => handleToggle('div1')} className='h-screen z-20 bg-[#00000081] absolute top-0 -ml-5 w-screen flex flex-col justify-center items-center text-center'>
+             <div onClick={() => handleToggle('div1')} className=' fade-slide-in h-screen z-20 bg-[#00000081] absolute top-0 -ml-5 w-screen flex flex-col justify-center items-center text-center'>
              <div className='bg-white m-5 p-10 rounded-lg'>
                  <div className='flex justify-center items-center text-center bg-[#22C3A6] p-[10px] m-auto mb-5  rounded-full h-[50px] w-[50px] '>
                  <IoCheckmarkSharp className='text-white text-xl' />
