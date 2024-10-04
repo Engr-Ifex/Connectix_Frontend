@@ -9,25 +9,120 @@ import {
   Link,
 } from "react-router-dom";
 
+
 const SignUp = () => {
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  });
+  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const [isCode, setIsCode] = useState(false);
-  // Initialize the counter with 60
   const [counter, setCounter] = useState(60);
+  const [verificationCode, setVerificationCode] = useState('');
+  const [isCodeComplete, setIsCodeComplete] = useState(false);
+
+
+  const handleCodeChange = (value, index) => {
+    setVerificationCode(value);
+    setIsCodeComplete(value.length === 4);
+  };
+
+  const handleCodeSubmit = async () => {
+    if (!isCodeComplete) return;
+
+    setIsLoading(true);
+    setError('');
+
+    try {
+      const response = await api.post('/auth/verify-email-code', {
+        email: formData.email,
+        verificationCode: verificationCode
+      });
+
+      console.log('Email verified successfully:', response.data);
+      // Handle successful verification (e.g., redirect to dashboard)
+      navigate('/Create'); // or wherever you want the user to go after verification
+
+    } catch (error) {
+      console.error('Verification error:', error);
+      setError(error.response?.data?.message || 'An error occurred during verification');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    setIsLoading(true);
+
+    // if (formData.password !== formData.confirmPassword) {
+    //   setError("Passwords don't match");
+    //   setIsLoading(false);
+    //   return;
+    // }
+
+    try {
+      console.log('Sending registration request with data:', {
+        name: formData.name,
+        email: formData.email,
+        password: '*****' // Don't log actual password
+      });
+
+      const response = await api.post('/auth/user-register', {
+        name: formData.name,
+        email: formData.email,
+        password: formData.password,
+      });
+
+      console.log('User registered successfully:', response.data);
+      setIsCode(true); // Move to the code verification step
+    } catch (error) {
+      console.error('Registration error:', error);
+
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        console.error('Error data:', error.response.data);
+        console.error('Error status:', error.response.status);
+        console.error('Error headers:', error.response.headers);
+        setError(error.response.data.message || 'An error occurred during registration');
+      } else if (error.request) {
+        // The request was made but no response was received
+        console.error('Error request:', error.request);
+        setError('No response received from server');
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        console.error('Error message:', error.message);
+        setError('An error occurred during registration');
+      }
+
+      // Log the full error object
+      console.error('Full error object:', JSON.stringify(error, null, 2));
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   useEffect(() => {
-    // Exit early if the counter is already at 0
     if (counter <= 0) {
       return;
     }
-
-    // Set up the interval to decrement the counter by 1 every second
     const timerId = setInterval(() => {
       setCounter((prevCounter) => prevCounter - 1);
     }, 1000);
-
-    // Clean up the interval on component unmount or when the countdown ends
     return () => clearInterval(timerId);
   }, [counter]);
+
   return (
     <>
       {isCode ? (
@@ -94,6 +189,24 @@ const SignUp = () => {
             <p className=" text-sm opacity-50 text-center">
               Fill the information below to create an account
             </p>
+            <button 
+              onClick={handleCodeSubmit}
+              disabled={!isCodeComplete || isLoading}
+              className={`flex items-center justify-center text-white py-5 w-full text-base font-semibold rounded-2xl ${isCodeComplete ? 'bg-black' : 'bg-gray-400'}`}
+            >
+              {isLoading ? 'Verifying...' : 'Continue'}
+            </button>
+          </div>
+          <p className='float-end font-semibold text-base cursor-pointer' onClick={() => setIsCode(false)}>
+            Back to Sign Up
+          </p>
+        </div>
+      ) : (
+        <div className='px-5 font-general flex flex-col items-center w-full max-w-[768px] mx-auto justify-center py-10 text-black'>
+          <div className='bg-black rounded-xl w-10 h-7 mb-12' />
+          <div className='flex flex-col items-center gap-3 mb-10'>
+            <h2 className='font-bold text-xl leading-6'>Create your account</h2>
+            <p className='text-sm opacity-50'>Fill the information below to create an account</p>
           </div>
           <div className="flex flex-col w-full items-center gap-6 text-sm mb-7">
             <input
