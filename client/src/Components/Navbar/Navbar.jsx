@@ -29,7 +29,6 @@ const Navbar = () => {
           <Profile />
           <p className='text-xs font-bold text-black'>Profile</p>
         </Link>
-
       </div>
     </div>
 

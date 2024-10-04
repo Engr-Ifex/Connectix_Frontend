@@ -14,7 +14,7 @@ const Active = () => {
               <div><p className='bg-[#000000] text-white p-2  px-4 rounded-full cursor-pointer hover:bg-black hover:text-white'>Active</p></div>
             </Link>
             <Link className='no-underline' to={"/ArchiveProposals"}>
-              <div><p className='bg-[#F4F4F4] p-2  px-4 rounded-full cursor-pointer hover:bg-black hover:text-white'>Archived Proposals</p></div> 
+              <div><p className='bg-[#F4F4F4] p-2  px-4 rounded-full cursor-pointer hover:bg-black hover:text-white'>Pending Proposals</p></div> 
             </Link>
             <Link className='no-underline' to={"/Messages"}>
               <div><p className='bg-[#F4F4F4] p-2  px-4 rounded-full cursor-pointer hover:bg-black hover:text-white'>Messages</p></div>
@@ -27,18 +27,17 @@ const Active = () => {
         <div className='flex justify-between'>
           <div className='grid bg-[#9747ff81] place-content-center w-[181px] h-[192px] text-center text-white rounded-lg mr-5'>
             <p className='text-5xl font-semibold pb-3'>0</p>
-            <p className='font-thin'>Offers</p>
-            <p className='font-thin'>From Promoter</p>
+            <p className='font-thin'>Active Proposals</p>
           </div>
           <div className='grid bg-[#0E8FCF] place-content-center w-[181px] h-[192px] text-center text-white rounded-lg'>
             <p className='text-5xl font-semibold pb-3'>7</p>
-            <p className='font-thin'>Submitted</p>
+            <p className='font-thin'>Pending</p>
             <p className='font-thin'>Proposals</p>
           </div>
         </div>
         <div className=' grid place-content-center text-center h-[192px] border-[#00000080] border-[1px] rounded-lg my-5 '>
             <p className='text-5xl font-semibold pb-3'>12</p>
-            <p className='font-extralight'>Active</p>
+            <p className='font-extralight'>Total</p>
             <p className='font-extralight'>Proposals</p>
         </div>
 
