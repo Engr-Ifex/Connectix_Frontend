@@ -8,7 +8,7 @@ import Login from './Components/Login_Home/Login/Login.jsx';
 import Home from './Components/Login_Home/Home/Home';
 import Events from './Components/Login_Home/Events/Events';
 import Create from './Components/Login_Home/Create/Create';
-import Settings from './Components/Proposal/Settings/Settings';
+import Settings1 from './Components/Proposal/Settings/Settings';
 import MainLogin from './Components/MainLogin/MainLogin';
 import Favorites from './Components/Login_Home/Favorite/Favorites';
 
@@ -33,7 +33,7 @@ function App() {
           <Route path='/Home' element={<Home/>}></Route>
           <Route path='/Active' element={<Active/>}></Route>
           <Route path='/ArchiveProposals' element={<ArchProposals/>}></Route>
-          <Route path='/settings' element={<Settings/>}></Route>
+          <Route path='/settings' element={<Settings1/>}></Route>
           <Route path='/Messages' element={<Messages/>}></Route>
           <Route path='/Profile' element={<Profile/>}></Route>
           <Route path="/Change" element={<Change />}></Route>

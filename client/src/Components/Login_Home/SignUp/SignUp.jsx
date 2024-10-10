@@ -201,7 +201,7 @@ const SignUp = () => {
             Back to Sign Up
           </p>
         </div>
-      ) : (
+      )} : (
         <div className='px-5 font-general flex flex-col items-center w-full max-w-[768px] mx-auto justify-center py-10 text-black'>
           <div className='bg-black rounded-xl w-10 h-7 mb-12' />
           <div className='flex flex-col items-center gap-3 mb-10'>
@@ -261,7 +261,7 @@ const SignUp = () => {
             <span className="text-secondary">Sign In</span>
           </Link>
         </div>
-      )}
+      )
     </>
   );
 };
