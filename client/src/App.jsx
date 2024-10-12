@@ -18,13 +18,22 @@ import Payment from './Components/Profile/Payment/Payment';
 import ChangePassword from './Components/Profile/ChangePassword/ChangePassword';
 import MyProfile from './Components/Profile/ViewProfile/MyProfile';
 import Profile from './Components/Profile/Profile/Profile';
+import { UsernameProvider } from './Components/Usernameprovider'
+import ShowHome from './Components/ShowpromoterHome/ShowHome';
+import ShowFavorites from './Components/ShowPromoterdetails/ShowEvents/ShowEvents';
 
+
+
+import { RegistrationProvider } from './Components/contexts/Formcontext'
+import AccountType from  "./Components/ShowPromoterdetails/AccountType/Accounttype"
 
 function App() {
 
   return (
     <>
      <div>
+     <RegistrationProvider>
+     <UsernameProvider>
         <Routes>
           <Route path='/SignUp' element={<SignUp/>}></Route>
           <Route path='/Create' element={<Create/>}></Route>
@@ -37,17 +46,27 @@ function App() {
           <Route path='/Messages' element={<Messages/>}></Route>
           <Route path='/mainlogin' element={<MainLogin/>}></Route>
           <Route path='/favorites' element={<Favorites/>}></Route>
+          <Route path='/showfavorites' element={<ShowFavorites/>}></Route>
+          <Route path='/showevents' element={<ShowFavorites/>}></Route>
+
+
           <Route path='/activities' element={<Activities/>}></Route>
           <Route path='/buycoin' element={<BuyCoin/>}></Route>
           <Route path='/payment' element={<Payment/>}></Route>
+          <Route path='/showhome' element={<ShowHome/>}></Route>
           <Route path='/profilesettings' element={<ProfileSettings/>}></Route>
           <Route path='/Profile' element={<Profile/>}></Route>
           <Route path='/MyProfile' element={<MyProfile/>}></Route>
-          <Route path='/ChangePassword' element={<ChangePassword/>}></Route>          
+          <Route path='/ChangePassword' element={<ChangePassword/>}></Route>  
+          <Route path='/accounttype' element={<AccountType/>}></Route>          
+        
 
 
 
         </Routes>
+        </UsernameProvider>
+        </RegistrationProvider>
+
      </div>
     </>
   )

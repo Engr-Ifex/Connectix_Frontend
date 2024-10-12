@@ -7,11 +7,14 @@ import EventDetailComp from './EventDetailComp';
 import { BrowserRouter as Router, Route, useLocation, useParams, Link } from 'react-router-dom';
 import Notification from './Notification';
 import Navbar from '../../Navbar/Navbar';
+import { useUsername } from '../../Usernameprovider';
 const Home = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [isNoti, setIsNoti] = useState(false);
   const [isEvent, setIsEvent] = useState(false);
+  const { username } = useUsername();
+
 
   function openNotiModal() {
     setIsNoti(true);
@@ -50,7 +53,7 @@ const Home = () => {
                   />
                 </div >
                 <div className='flex flex-col gap-2 text-[#141414]'>
-                  <p className='text-sm '>Hi, Olashile</p>
+                  <p className='text-sm '> Hi, {username}</p>
                   <p className='font-semibold text-xl'>Welcome Back</p>
                 </div>
               </div >

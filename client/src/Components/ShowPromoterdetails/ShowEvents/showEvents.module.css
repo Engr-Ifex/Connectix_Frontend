@@ -1,0 +1,12 @@
+.modal {
+    /* z-index: 20; */
+    padding: 24px;
+    position: fixed;
+    bottom: 0 !important;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px -4px 16px 0px rgba(0, 0, 0, 0.15);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
