@@ -7,7 +7,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { PiSealWarning } from "react-icons/pi";
 import { IoCheckmarkSharp } from "react-icons/io5";
 
-const Settings = () => {
+const Settings1 = () => {
 
     const [visibleDiv, setVisibleDiv] = useState('div1');
 
@@ -163,4 +163,4 @@ const Settings = () => {
   )
 }
 
-export default Settings
+export default Settings1
