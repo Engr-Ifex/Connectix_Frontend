@@ -99,12 +99,14 @@ const Landing = () => {
             >
               Create account
             </Link>
+            <Link to="/mainlogin">
             <button
               className="text-black py-5 w-full text-base font-semibold border border-[#0000007d] rounded-2xl text-center"
               onClick={() => setIsSlide(false)}
             >
               Sign In
             </button>
+            </Link>
           </div>
         </div>
       </Fade>

@@ -45,7 +45,7 @@ const Login = () => {
   }, []);
   return (
     <>
-      <Fade when={greenScreen}>
+      {/* <Fade when={greenScreen}>
         <div
           className={`${
             greenScreen ? "flex " : "hidden"
@@ -54,7 +54,7 @@ const Login = () => {
           <div className=" bg-greenLogo rounded-2xl w-[108px] h-20"></div>
           <p className="text-yellowLogo font-semibold text-4xl">Logo</p>
         </div>
-      </Fade>
+      </Fade> */}
       <Fade when={!greenScreen}>
         <div
           className={`${

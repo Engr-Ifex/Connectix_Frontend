@@ -13,7 +13,7 @@ const Navbar = () => {
           <HomeIcon />
           <p className='text-xs font-bold text-black'>Home</p>
         </Link>
-        <Link to='/Active' className={`${location.pathname == '/Active' ? '' : 'opacity-70' } flex flex-col items-center gap-1`}>
+        <Link to='/showproposals' className={`${location.pathname == '/Active' ? '' : 'opacity-70' } flex flex-col items-center gap-1`}>
           <Proposal />
           <p className='text-xs font-bold text-black'>Proposal</p>
         </Link>
@@ -25,7 +25,7 @@ const Navbar = () => {
           <FavoritesIcon />
           <p className='text-xs font-bold text-black'>Favorites</p>
         </Link>
-        <Link to='/Profile' className={`${location.pathname == '/profile' ? '' : 'opacity-70' } flex flex-col items-center gap-1`}>
+        <Link to='/showprofile' className={`${location.pathname == '/profile' ? '' : 'opacity-70' } flex flex-col items-center gap-1`}>
           <Profile />
           <p className='text-xs font-bold text-black'>Profile</p>
         </Link>

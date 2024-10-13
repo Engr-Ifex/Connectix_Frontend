@@ -21,11 +21,9 @@ import Profile from './Components/Profile/Profile/Profile';
 import { UsernameProvider } from './Components/Usernameprovider'
 import ShowHome from './Components/ShowpromoterHome/ShowHome';
 import ShowFavorites from './Components/ShowPromoterdetails/ShowEvents/ShowEvents';
-
-
-
 import { RegistrationProvider } from './Components/contexts/Formcontext'
 import AccountType from  "./Components/ShowPromoterdetails/AccountType/Accounttype"
+import Landing from './Components/Login_Home/Landing/Landing'
 
 function App() {
 
@@ -39,7 +37,7 @@ function App() {
           <Route path='/Login' element={<Login/>}></Route>
           <Route path='/SignUp' element={<SignUp/>}></Route>
           <Route path='/Create' element={<Create/>}></Route>
-          <Route path='/Details' element={<Details/>}></Route>
+          {/* <Route path='/Details' element={<Details/>}></Route> */}
           <Route path='/Events' element={<Events />}></Route>
           <Route path='/Home' element={<Home/>}></Route>
           <Route path='/Active' element={<Active/>}></Route>
@@ -50,8 +48,6 @@ function App() {
           <Route path='/favorites' element={<Favorites/>}></Route>
           <Route path='/showfavorites' element={<ShowFavorites/>}></Route>
           <Route path='/showevents' element={<ShowFavorites/>}></Route>
-
-
           <Route path='/activities' element={<Activities/>}></Route>
           <Route path='/buycoin' element={<BuyCoin/>}></Route>
           <Route path='/payment' element={<Payment/>}></Route>
