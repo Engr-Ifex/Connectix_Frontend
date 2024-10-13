@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from '../../Navbar/Navbar'
+import { useUsername } from "../../Usernameprovider";
 
 import {
   FaUser,
@@ -19,6 +20,9 @@ const Profile = () => {
   const [showLogoutPrompt, setShowLogoutPrompt] = useState(false);
   const [profileImage, setProfileImage] = useState(Ellipse);
   const navigate = useNavigate();
+  const { username } = useUsername();
+
+   
 
   const handleLogoutClick = () => {
     setShowLogoutPrompt(true);
@@ -73,7 +77,7 @@ const Profile = () => {
 
       <div className="text-center mt-2">
         <h2 className="text-lg sm:text-xl">
-          <b>Gen Z King</b>
+          <b>{username}</b>
         </h2>
         <p className="text-sm sm:text-base">Artist</p>
       </div>

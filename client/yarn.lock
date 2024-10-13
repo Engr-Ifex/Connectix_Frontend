@@ -2402,7 +2402,7 @@ react-multi-carousel@^2.8.5:
 
 react-pin-input@^1.3.1:
   version "1.3.1"
-  resolved "https://registry.npmjs.org/react-pin-input/-/react-pin-input-1.3.1.tgz"
+  resolved "https://registry.yarnpkg.com/react-pin-input/-/react-pin-input-1.3.1.tgz#b99e5891ac6785dbd607910aaf183886bf965866"
   integrity sha512-/xlrm2GDryrZfZe2DMA8EadxXeOMzkx7lcvQaHFPWbw/v2f9mMbM+tYPgeBsqex1omKMtjZbT3XCqDpBrummpw==
 
 react-player@^2.16.0:

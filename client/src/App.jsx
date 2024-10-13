@@ -11,38 +11,60 @@ import Create from './Components/Login_Home/Create/Create';
 import Settings1 from './Components/Proposal/Settings/Settings';
 import MainLogin from './Components/MainLogin/MainLogin';
 import Favorites from './Components/Login_Home/Favorite/Favorites';
-
-import Profile from './Components/Login_Home/Profile/Profile';
-import { Settings, Premium, Logout, Change, Activities } from './Components/Login_Home/Profile';
-import Details from './Components/Login_Home/Create/Detail';
-import Landing from './Components/Login_Home/Landing/Landing.jsx';
-
+import Activities from './Components/Profile/Activities/Activities'
+import BuyCoin from './Components/Profile/BuyCoin/BuyCoin';
+import ProfileSettings from './Components/Profile/Settings/Settings'
+import Payment from './Components/Profile/Payment/Payment';
+import ChangePassword from './Components/Profile/ChangePassword/ChangePassword';
+import MyProfile from './Components/Profile/ViewProfile/MyProfile';
+import Profile from './Components/Profile/Profile/Profile';
+import { UsernameProvider } from './Components/Usernameprovider'
+import ShowHome from './Components/ShowpromoterHome/ShowHome';
+import ShowFavorites from './Components/ShowPromoterdetails/ShowEvents/ShowEvents';
+import { RegistrationProvider } from './Components/contexts/Formcontext'
+import AccountType from  "./Components/ShowPromoterdetails/AccountType/Accounttype"
+import Landing from './Components/Login_Home/Landing/Landing'
 
 function App() {
 
   return (
     <>
      <div>
+     <RegistrationProvider>
+     <UsernameProvider>
         <Routes>
           <Route index element={<Landing />}></Route>
           <Route path='/Login' element={<Login/>}></Route>
           <Route path='/SignUp' element={<SignUp/>}></Route>
           <Route path='/Create' element={<Create/>}></Route>
-          <Route path='/Details' element={<Details/>}></Route>
+          {/* <Route path='/Details' element={<Details/>}></Route> */}
           <Route path='/Events' element={<Events />}></Route>
           <Route path='/Home' element={<Home/>}></Route>
           <Route path='/Active' element={<Active/>}></Route>
           <Route path='/ArchiveProposals' element={<ArchProposals/>}></Route>
           <Route path='/settings' element={<Settings1/>}></Route>
           <Route path='/Messages' element={<Messages/>}></Route>
+          <Route path='/mainlogin' element={<MainLogin/>}></Route>
+          <Route path='/favorites' element={<Favorites/>}></Route>
+          <Route path='/showfavorites' element={<ShowFavorites/>}></Route>
+          <Route path='/showevents' element={<ShowFavorites/>}></Route>
+          <Route path='/activities' element={<Activities/>}></Route>
+          <Route path='/buycoin' element={<BuyCoin/>}></Route>
+          <Route path='/payment' element={<Payment/>}></Route>
+          <Route path='/showhome' element={<ShowHome/>}></Route>
+          <Route path='/profilesettings' element={<ProfileSettings/>}></Route>
           <Route path='/Profile' element={<Profile/>}></Route>
-          <Route path="/Change" element={<Change />}></Route>
-          <Route path="/Activities" element={<Activities />}></Route> {/* Corrected path */}
-          <Route path="/Premium" element={<Premium />}></Route>
-          <Route path="/Settings" element={<Settings />}></Route>
-          <Route path="/Logout" element={<Logout />}></Route>
+          <Route path='/MyProfile' element={<MyProfile/>}></Route>
+          <Route path='/ChangePassword' element={<ChangePassword/>}></Route>  
+          <Route path='/accounttype' element={<AccountType/>}></Route>          
+        
+
+
 
         </Routes>
+        </UsernameProvider>
+        </RegistrationProvider>
+
      </div>
     </>
   )

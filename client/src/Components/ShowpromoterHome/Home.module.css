@@ -1,0 +1,55 @@
+.modal {
+    /* z-index: 20; */
+    padding: 24px;
+    position: fixed;
+    bottom: 0 !important;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px -4px 16px 0px rgba(0, 0, 0, 0.15);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  
+  .modal svg{
+    width: 16px !important;
+  }
+  
+  .modalNoti {
+    padding: 24px;
+    position: fixed;
+    bottom: 0 !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: white;
+    box-shadow: 0px -4px 16px 0px rgba(0, 0, 0, 0.15);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  
+  .modalNoti svg{
+    width: 16px !important;
+    position: absolute;
+    right: 10px !important;
+  }
+  
+  .eventDetailModal {
+    padding: 24px;
+    position: fixed;
+    bottom: 0 !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: white;
+    box-shadow: 0px -4px 16px 0px rgba(0, 0, 0, 0.15);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  
+  
+  .submitModal {
+    box-shadow: 0px -4px 16px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 24px;
+    padding: 36px 24px;
+  }
