@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { Facebook, Google, X } from "../Login_Home/SVG";
 import api from "../../services/api"
+import { useUsername } from '../Usernameprovider/'
+
 
 
 const MainLogin = () => {
@@ -9,13 +11,15 @@ const MainLogin = () => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    name: '',
+    // name: '',
     email: '',
     password: '',
-    confirmPassword: '',
+    // confirmPassword: '',
   });
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const { setUsername } = useUsername();
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -31,9 +35,14 @@ const MainLogin = () => {
       console.log('Login successful:', response.data);
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
+        setUsername(response.data.user.username || response.data.user.name);
+
+        localStorage.setItem('user', JSON.stringify(response.data.user));
+
         
         // Verification step
         const savedToken = localStorage.getItem('token');
+
         if (savedToken) {
           console.log('Token successfully saved:', savedToken);
           // You might want to only log a part of the token for security reasons
