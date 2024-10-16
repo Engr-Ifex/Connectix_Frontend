@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Unread from './UnreadData'
-import Navbar from '../../Navbar/Navbar'
+import Navbar from "../../../../Navbar/ShowNavbar";
 
 
 const Active = () => {
@@ -12,7 +12,7 @@ const Active = () => {
         </div>
         <div>
             <div className='flex gap-2 text-sm text-[#5F5F63] font-general'>
-            <Link className='no-underline' to={"/Active"}>
+            <Link className='no-underline' to={"/showproposals"}>
               <div><p className='bg-[#000000] text-white p-2  px-4 rounded-full cursor-pointer hover:bg-black hover:text-white'>Active</p></div>
             </Link>
             <Link className='no-underline' to={"/ArchiveProposals"}>

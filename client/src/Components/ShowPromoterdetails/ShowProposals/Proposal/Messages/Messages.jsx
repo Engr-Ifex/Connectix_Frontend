@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { GiSettingsKnobs } from "react-icons/gi";
 import data from './MsgData';
 import { AiFillFire } from "react-icons/ai";
-import Navbar from '../../Navbar/Navbar'
+import Navbar from "../../../../Navbar/ShowNavbar";
 
 
 const Messages = () => {
@@ -15,7 +15,7 @@ const Messages = () => {
             </div>
             <div>
             <div className='flex gap-2 text-sm text-[#5F5F63] font-general'>
-            <Link className='no-underline' to={"/Active"}>
+            <Link className='no-underline' to={"/showproposals"}>
               <div><p className=' bg-[#F4F4F4] p-2  px-4 rounded-full cursor-pointer hover:bg-black hover:text-white'>Active</p></div>
             </Link>
             <Link className='no-underline' to={"/ArchiveProposals"}>

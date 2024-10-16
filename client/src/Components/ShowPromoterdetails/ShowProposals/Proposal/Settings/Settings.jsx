@@ -21,7 +21,7 @@ const Settings1 = () => {
   return (
     <div className='font-general p-4 sm:p-5 flex flex-col min-h-screen'>
   <div className='flex items-center justify-between mb-6'>
-    <Link className='no-underline' to='/Active'>
+    <Link className='no-underline' to='/showproposals'>
       <FaArrowLeftLong className='text-xl' />
     </Link>
     <p className='font-bold text-xl text-center flex-grow'>Settings</p>

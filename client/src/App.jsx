@@ -1,14 +1,14 @@
 import './App.css'
 import { Route, Routes } from "react-router";
-import Active from './Components/Proposal/Active/Active'
-import ArchProposals from './Components/Proposal/ArchProposals/ArchProposals';
-import Messages from './Components/Proposal/Messages/Messages';
+import Active from './Components/ShowPromoterdetails/ShowProposals/Proposal/Active/Active'
+import ArchProposals from './Components/ShowPromoterdetails/ShowProposals/Proposal/ArchProposals/ArchProposals';
+import Messages from './Components/ShowPromoterdetails/ShowProposals/Proposal/Messages/Messages';
 import SignUp from './Components/Login_Home/SignUp/SignUp';
 import Login from './Components/Login_Home/Login/Login.jsx';
 import Home from './Components/Login_Home/Home/Home';
 import Events from './Components/Login_Home/Events/Events';
 import Create from './Components/Login_Home/Create/Create';
-import Settings1 from './Components/Proposal/Settings/Settings';
+import Settings1 from './Components/ShowPromoterdetails/ShowProposals/Proposal/Settings/Settings';
 import MainLogin from './Components/MainLogin/MainLogin';
 import Favorites from './Components/Login_Home/Favorite/Favorites';
 import Activities from './Components/Profile/Activities/Activities'
@@ -24,6 +24,8 @@ import ShowFavorites from './Components/ShowPromoterdetails/ShowEvents/ShowEvent
 import { RegistrationProvider } from './Components/contexts/Formcontext'
 import AccountType from  "./Components/ShowPromoterdetails/AccountType/Accounttype"
 import Landing from './Components/Login_Home/Landing/Landing'
+import ArtistDetails from './Components/ShowPromoterdetails/ShowProposals/ArtistDetails/ArtistDetails.jsx';
+import Chat from './Components/ShowPromoterdetails/ShowProposals/Chat/Chat.jsx';
 
 function App() {
 
@@ -40,7 +42,7 @@ function App() {
           {/* <Route path='/Details' element={<Details/>}></Route> */}
           <Route path='/Events' element={<Events />}></Route>
           <Route path='/Home' element={<Home/>}></Route>
-          <Route path='/Active' element={<Active/>}></Route>
+          <Route path='/showproposals' element={<Active/>}></Route>
           <Route path='/ArchiveProposals' element={<ArchProposals/>}></Route>
           <Route path='/settings' element={<Settings1/>}></Route>
           <Route path='/Messages' element={<Messages/>}></Route>
@@ -56,7 +58,9 @@ function App() {
           <Route path='/Profile' element={<Profile/>}></Route>
           <Route path='/MyProfile' element={<MyProfile/>}></Route>
           <Route path='/ChangePassword' element={<ChangePassword/>}></Route>  
-          <Route path='/accounttype' element={<AccountType/>}></Route>          
+          <Route path='/accounttype' element={<AccountType/>}></Route>
+          <Route path='/artistdetails' element={<ArtistDetails/>}></Route>  
+          <Route path='/chat' element={<Chat/>}></Route>          
         
 
 
